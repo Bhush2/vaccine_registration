@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body style="background-color: aqua;  font-family: 'Courier New', Courier, monospace;">
+    <h1>vacine registration form</h1><br><br>
+    <div>
+        <form action="javascript:void(0);" id="formid"><b>
+            <label for="firstName" >First Name</label>
+            <input type="text" id="fname" placeholder="john" ><br><br>
+
+            <label for="lastName" >Last Name</label>
+            <input type="text" id="lname" placeholder="sena"><br><br>
+
+            <label for="age" >Age</label>
+            <input type="number" id="age" placeholder="18+"><br><br>
+
+            <label for="gender">Gender</label>
+            <input id="mgender" type="radio" value="male" name="gender" >male</input>
+            <input id="fgender" type="radio" value="female" name="gender" >female</input><br><br>
+
+            <label for="vacineName" id="vacineName">Type of Vacine.</label>
+            <select name="vacine" id="vacine">
+            <option name="selection" id="none">select</option>
+            <option name="covishield" id="serum">covishield</option>
+            <option name="covaxin" id="serum">covaxin</option>
+            <option name="pfizer" id="pfizer">pfizer</option>
+            <option name="moderna" id="moderna">moderna</option>
+            <option name="sptutnikv" id="sptutnikv">sptutnikv</option>
+            </select><br><br>
+
+            <label for="checkbox">I agree</label>
+            <input type="checkbox" name="agree" id="agree">
+            <label for="checkbox">I disagree</label>
+            <input type="checkbox" name="disagree" id="disagree"><br><br>
+
+            <label for="date" id="date">date.</label>
+
+            <select name="date" id="">
+            <option name="date" id="datenone">date</option>
+            <option name="1" id="d1">1</option>
+            <option name="2" id="d1">2</option>
+            <option name="3" id="d1">3</option>
+            <option name="4" id="d1">4</option>
+            <option name="5" id="d1">5</option>
+            <option name="6" id="d1">6</option>
+            <option name="7" id="d1">7</option>
+            <option name="8" id="d1">8</option>
+            <option name="9" id="d1">9</option>
+            <option name="10" id="d1">10</option>
+            </select> 
+            
+            <select name="month" id="month">
+            <option name="month" id="monthnone">month</option>
+            <option name="jan" id="monthnone">jan</option>
+            <option name="feb" id="monthnone">feb</option>
+            <option name="mar" id="monthnone">mar</option>
+            <option name="apr" id="monthnone">apr</option>
+            <option name="may" id="monthnone">may</option>
+            <option name="jun" id="monthnone">jun</option>
+            <option name="jul" id="monthnone">jul</option>
+            <option name="aug" id="monthnone">aug</option>
+            <option name="sep" id="monthnone">sep</option>
+            <option name="oct" id="monthnone">oct</option>
+            <option name="nov" id="monthnone">nov</option>
+            <option name="dec" id="monthnone">dec</option>
+            </select>
+
+            <select name="year" id="year">
+                <option name="year" id="monthnone">year</option>
+                <option name="2020" id="monthnone">2020</option>
+                <option name="2021" id="monthnone">2021</option>
+                <option name="2022" id="monthnone">2022</option>
+            </select><br><br>
+       
+        </span>
+            <button id="submitb" type="onclick" onclick="myVacine()" >submit</button>
+        </b></form>
+    
+    </div>
+    <div id="display">
+    </div>
+
+    <script>
+        function myVacine() {
+            var fname= document.getElementById("fname").value;
+            var lname= document.getElementById("lname").value;
+            var age= document.getElementById("age").value;
+            var gender= document.getElementById("formid").elements["gender"].value;
+            var vacinename=document.getElementById("formid").elements["vacine"].value;
+            var month=document.getElementById("formid").elements["month"].value;
+            var date=document.getElementById("formid").elements["date"].value;
+            var year=document.getElementById("formid").elements["year"].value;
+            var checkbox=document.forms[0]["agree"].value;
+
+        document.getElementById("display").innerHTML=fname +" "+ lname +" " + vacinename +" " +gender +" " + age +" "+ date +" " + month +" " + year;
+        }
+        
+    </script>
+
+</body>
+</html>
